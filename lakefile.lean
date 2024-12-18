@@ -12,6 +12,9 @@ package «Lean Problems» where
 lean_lib «LeanBook» where
   globs := #[.submodules `LeanBook] -- Build all files in the `LeanBook` directory.
 
+require mathlib from git
+  "https://github.com/leanprover-community/mathlib4.git" @ "master"
+
 require mdgen from git
   "https://github.com/Seasawher/mdgen" @ "main"
 
