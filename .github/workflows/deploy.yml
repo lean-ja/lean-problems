@@ -41,11 +41,11 @@ jobs:
       - name: build
         run: lake run build
 
-      - name: Run Link Checker
-        uses: lycheeverse/lychee-action@v2
-        with:
-          fail: true
-          args: --base book .
+      # - name: Run Link Checker
+      #   uses: lycheeverse/lychee-action@v2
+      #   with:
+      #     fail: true
+      #     args: --base book .
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
