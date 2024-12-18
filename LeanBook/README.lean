@@ -1,43 +1,8 @@
-/- # Lean Book
-Lean Book is the mdbook template configured for the Lean Project. Intended for use in writing textbooks and documentation in Lean.
+/- # Lean Problems
 
-Lean Book has a variety of features.
--/
+Lean の演習問題集です。
 
-/- ## Syntax Highlighting for Lean Code
-Lean syntax highlighting works in this book. Here is an example of Lean code block.-/
+## 🎮 遊び方
 
-variable {P Q : Prop}
-
-example : P → (P ∨ Q) := by
-  intro hP
-  apply Or.inl
-  exact hP
-
-/- ## Run Lean4 Code Block
-All Lean code blocks in this book have a button that jumps to the Lean Playground.
-
-## Jump to Lean Playground from any page
-Jump to the Lean4 Playground by clicking on the play button in the top right corner of a page.
-
-## Table of Contents
-
-Automatically add a table of contents to each page.
-
-## Easy Code Management
-The markdown files in this book are generated from Lean code using [mdgen](https://github.com/Seasawher/mdgen). There is no need to maintain separately the code examples and the text.
-
-## Automatically update Lean version
-
-The [lean-update](https://github.com/oliver-butterley/lean-update) action is configured in this repository, which periodically attempts to update the version of Lean and its libraries.
-
-## Improved Search
-The mdbook does not support searches in languages other than English, but this book does support searches in other languages (e.g. Japanese)!
-
-## MathJax
-You can use MathJax in this book. For example, $a^2 + b^2 = c^2$.
-
-$$
-ζ (s) = \sum_{n=1}^{\infty} \frac{1}{n^s}
-$$
+解き始めるための最も簡単で手軽な方法は、Lean 4 Playground を使う方法です。各ページの右上に <i class="fa fa-play"></i> というボタンがあるので、これをクリックしてください。Lean 4 Playground のページに移動し、そのままブラウザ上で演習問題を解き始めることができます。
 -/
