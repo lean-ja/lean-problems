@@ -10,7 +10,10 @@ package «Lean Problems» where
 
 @[default_target]
 lean_lib «LeanBook» where
-  globs := #[.submodules `LeanBook] -- Build all files in the `LeanBook` directory.
+  globs := #[.submodules `LeanBook.Solution]
+
+require «mk-exercise» from git
+  "https://github.com/Seasawher/mk-exercise.git" @ "main"
 
 require mathlib from git
   "https://github.com/leanprover-community/mathlib4.git" @ "master"
@@ -34,6 +37,7 @@ def runCmd (input : String) : IO Unit := do
     IO.println out.stdout
 
 script build do
+  runCmd "lake exe mk_exercise LeanBook/Solution LeanBook/Exercise"
   runCmd "lake exe mdgen LeanBook booksrc"
   runCmd "mdbook build"
   return 0
