@@ -10,7 +10,7 @@ package «Lean Problems» where
 
 @[default_target]
 lean_lib «LeanBook» where
-  globs := #[.submodules `LeanBook.Solution]
+  globs := #[.submodules `LeanBook.Solution, .one `LeanBook.README]
 
 require «mk-exercise» from git
   "https://github.com/Seasawher/mk-exercise.git" @ "main"
